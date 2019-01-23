@@ -72,13 +72,14 @@
                             $hundreds = floor(($num - $tens - $ones)/100);
                             echo "</br>";
                             $result = "";
-
                             if($hundreds > 0){
                                 if($tens == 0 && $ones == 0) {
                                     $result .= read($hundreds) . " hundred";
                                 }
                                 else{
                                     $result .= read($hundreds) . " hundred and ";
+                                    }
+                                }
                                     if($tens == 0){
                                         $result .= read($ones);
 
@@ -117,8 +118,6 @@
                                     }
 
                                 }
-                            }
-                        }
                      echo $result;
                     }
                     catch (Exception $e){
